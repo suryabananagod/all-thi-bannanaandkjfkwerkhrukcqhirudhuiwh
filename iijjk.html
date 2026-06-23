@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>make changes to rectangle</title>
+    <style>
+        .rectangle {
+            width: 200px;
+            height: 100px;
+            background-color: lightblue;
+            margin-bottom: 20px;
+        }
+        .buttons button {
+            margin-right: 10px;
+            padding: 10px 20px;
+        }
+    </style>
+</head>
+<body>
+    <h2>making a rectangle and making changes to it</h2>
+
+    <div class = "rectangle"></div>
+    
+    <div class = "buttons">
+        <button onclick="changeColor()">Change Color</button>
+        <button onclick="hiderecktangle()">Hide Rectangle</button>
+        <button onclick="showrectangle()">Show Rectangle</button>
+        <button onclick="changetocircle()">Change to Circle</button>
+        <button onclick="changetosquare()">Change to Square</button>
+        <button onclick="decreasesize()">Decrease Size</button>
+        <button onclick="increasesize()">Increase Size</button>
+        <button onclick="changetoRectangle()">Change to Rectangle</button>
+    </div>
+    <script>
+        function changetoRectangle() {
+            let rectangle = document.querySelector('.rectangle');
+            rectangle.style.borderRadius = '0';
+             rectangle.style.width = '200px';
+             rectangle.style.height = '100px';
+        }
+
+        function decreasesize() {
+            let rectangle = document.querySelector('.rectangle');
+            let currentWidth = parseInt(window.getComputedStyle(rectangle).width);
+            let currentHeight = parseInt(window.getComputedStyle(rectangle).height);
+            rectangle.style.width = (currentWidth - 20) + 'px';
+            rectangle.style.height = (currentHeight - 20) + 'px';
+        }
+
+        function increasesize() {
+            let rectangle = document.querySelector('.rectangle');
+            let currentWidth = parseInt(window.getComputedStyle(rectangle).width);
+            let currentHeight = parseInt(window.getComputedStyle(rectangle).height);
+            rectangle.style.width = (currentWidth + 20) + 'px';
+            rectangle.style.height = (currentHeight + 20) + 'px';
+        }
+
+        function changeColor() {
+            let rectangle = document.querySelector('.rectangle');
+            rectangle.style.backgroundColor = 'red';
+        }
+
+        function changeColor() {
+            let rectangle = document.querySelector('.rectangle');
+            rectangle.style.backgroundColor = 'blue';
+        }
+
+        function hiderecktangle() {
+            let rectangle = document.querySelector('.rectangle');
+            rectangle.style.display = 'none';
+             rectangl
+            e.style.display = 'hidden';
+        }
+
+        function showrectangle() {
+            let rectangle = document.querySelector('.rectangle');
+            rectangle.style.display = 'block';
+        }
+
+        function changetocircle() {
+            let rectangle = document.querySelector('.rectangle');
+            rectangle.style.borderRadius = '50%';
+        }
+
+        function changetosquare() {
+            let rectangle = document.querySelector('.rectangle');
+            rectangle.style.borderRadius = '0';
+             rectangle.style.width = '100px';
+             rectangle.style.height = '100px';
+        }
+    </script>
+</body>
+</html>
